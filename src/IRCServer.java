@@ -1,5 +1,3 @@
-import Mediator.Channel.ChannelMediator;
-import Mediator.Server.ServerHandler;
 import Mediator.Server.ServerMediator;
 import Mediator.User.AbstractUser;
 import Mediator.User.IRCUser;
@@ -15,7 +13,7 @@ public class IRCServer {
         ServerMediator servMediator = new ServerMediator();
 //        ChannelMediator chanMediator = new ChannelMediator();
 
-        ServerHandler sh = new ServerHandler();
+        CommandHandler sh = new CommandHandler();
 
         new Thread(() -> {
 //            int portNumber = Integer.parseInt(args[0]);
@@ -28,12 +26,13 @@ public class IRCServer {
                     Socket clientSocket = serverSocket.accept();
 
                     IRCUser user = sh.handShake(clientSocket);
+//                    sh.join
 
                     AbstractUser userAbs = new User(servMediator, user);
                     servMediator.addUser(userAbs);
 //                    chanMediator.addUser(userAbs);
 
-                    System.out.println("Mediator.User.User added");
+                    System.out.println("User added");
                     System.out.println(userAbs);
                     System.out.println("---");
                 }

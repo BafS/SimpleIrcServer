@@ -1,5 +1,3 @@
-package Mediator.Server;
-
 import Mediator.Command;
 import Mediator.User.IRCUser;
 
@@ -11,7 +9,7 @@ import java.net.Socket;
 /**
  * Handle user input
  */
-public class ServerHandler {
+public class CommandHandler {
 
     private Command lex(String command) {
         String[] tokens = command.split(" ");
@@ -43,7 +41,6 @@ public class ServerHandler {
         return new IRCUser(c.getArgs()[1], c.getArgs()[1], c.getArgs()[2], sock);
     }
 
-    private void join(IRCUser user) {
-
-    }
+//    public void join(IRCUser user) {
+//    }
 }

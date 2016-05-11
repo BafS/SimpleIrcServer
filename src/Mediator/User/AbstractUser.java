@@ -11,6 +11,10 @@ public abstract class AbstractUser {
         this.user = user;
     }
 
+    public IRCUser getIRCUser() {
+        return user;
+    }
+
     public abstract void send(String msg);
 
 //    public abstract void send(Command cmd);

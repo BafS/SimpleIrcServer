@@ -2,7 +2,6 @@ package Mediator.Server;
 
 import Mediator.Channel.AbstractChannel;
 import Mediator.User.AbstractUser;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +24,15 @@ public class ServerMediator implements ServerMediatorInterface {
     @Override
     public void addChannel(AbstractChannel channel) {
         channels.add(channel);
+    }
+
+    // TODO listen here ?
+    public void listen() {
+//        CommandHandler ch = new CommandHandler();
+
+        users.stream().forEach(u -> {
+//            u.getIRCUser().getSock();
+        });
     }
 
     @Override
