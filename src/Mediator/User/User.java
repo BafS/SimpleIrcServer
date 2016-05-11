@@ -1,4 +1,8 @@
-public class User extends UserAbstract {
+package Mediator.User;
+
+import Mediator.Server.ServerMediator;
+
+public class User extends AbstractUser {
 
     public User(ServerMediator mediator, IRCUser user) {
         super(mediator, user);
@@ -12,6 +16,7 @@ public class User extends UserAbstract {
 
     @Override
     public void receive(String msg) {
+//        user.getSock();
         System.out.println(this.user.getName() + ": Received Message:" + msg);
     }
 

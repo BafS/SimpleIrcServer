@@ -1,4 +1,4 @@
-package Channel;
+package Mediator.Channel;
 
 /**
  * Created by fabiens on 10/05/16.

@@ -1,3 +1,5 @@
+package Mediator.User;
+
 import java.net.Socket;
 
 public class IRCUser {
@@ -31,7 +33,7 @@ public class IRCUser {
 
     @Override
     public String toString() {
-        return "IRCUser{" +
+        return "Mediator.User.IRCUser{" +
                 "name='" + name + '\'' +
                 ", username='" + username + '\'' +
                 ", nick='" + nick + '\'' +

@@ -1,3 +1,5 @@
+package Mediator;
+
 public class Command {
     private String type;
     private String[] args;
